@@ -1,6 +1,6 @@
 game.import("extension", function (lib, game, ui, get, ai, _status) {
     return {
-        name: "国战军争",
+        name: "汉国战",
         content: function (config, pack) {
             var style1 = document.createElement('style');
             style1.innerHTML += "[data-number='9']>.player[data-position='1']{top:45px;left:calc(97% - 75px);}";
@@ -48,37 +48,37 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                 '10': '十人',
             };
 
-            lib.extensionMenu.extension_国战军争.junzhengs = {
+            lib.extensionMenu.extension_汉国战.junzhengs = {
                 name: "军争武将",
                 intro: "开启后将池将增加军争和对决武将。",
                 init: true,
             }
-            lib.extensionMenu.extension_国战军争.guanfangs = {
+            lib.extensionMenu.extension_汉国战.guanfangs = {
                 name: "官方武将修改",
                 intro: "开启后将修改部分官方武将。",
                 init: true,
             }
-            lib.extensionMenu.extension_国战军争.diys = {
+            lib.extensionMenu.extension_汉国战.diys = {
                 name: "DIY武将",
                 intro: "开启后将池将增加各类DIY武将。",
                 init: true,
             }
-            lib.extensionMenu.extension_国战军争.addcards = {
+            lib.extensionMenu.extension_汉国战.addcards = {
                 name: "军争卡牌",
                 intro: "开启后牌堆中将加入部分军争卡牌。",
                 init: true,
             }
-            lib.extensionMenu.extension_国战军争.zhenfas = {
+            lib.extensionMenu.extension_汉国战.zhenfas = {
                 name: "阵法牌",
                 intro: "开启后牌堆中将加入阵法牌。",
                 init: false,
             }
-            lib.extensionMenu.extension_国战军争.yexinjia = {
+            lib.extensionMenu.extension_汉国战.yexinjia = {
                 name: "野心家",
                 intro: "开启后将修改野心家的一些相关设定。",
                 init: true,
             }
-            lib.extensionMenu.extension_国战军争.hanchao = {
+            lib.extensionMenu.extension_汉国战.hanchao = {
                 name: "汉武将",
                 intro: "开启后将新增一个汉势力，并且修改部分武将势力为汉朝。",
                 init: true,
@@ -1200,14 +1200,14 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                 ]
                 // 双势力
                 // junzheng1
-                lib.characterPack.mode_guozhan.gz_wangji = ['male', 'wei', 3, ['qizhi', 'jinqu'],
-                    ['doublegroup:wei:jin', 'gzskin']
+                lib.characterPack.mode_guozhan.gz_wangji = ['male', 'jin', 3, ['qizhi', 'jinqu'],
+                    ['doublegroup:jin:wei', 'gzskin']
                 ]
-                lib.characterPack.mode_guozhan.gz_qiaozhou = ['male', 'shu', 3, ['zhiming', 'xingbu'],
-                    ['doublegroup:shu:jin', 'gzskin']
+                lib.characterPack.mode_guozhan.gz_qiaozhou = ['male', 'jin', 3, ['zhiming', 'xingbu'],
+                    ['doublegroup:jin:shu', 'gzskin']
                 ]
-                lib.characterPack.mode_guozhan.gz_wuyan = ['male', 'wu', 4, ['lanjiang'],
-                    ['doublegroup:wu:jin']
+                lib.characterPack.mode_guozhan.gz_wuyan = ['male', 'jin', 4, ['lanjiang'],
+                    ['doublegroup:jin:wu']
                 ]
                 // junzheng2
                 // junzheng3
@@ -1339,7 +1339,9 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                 ]
                 lib.characterPack.mode_guozhan.gz_caosong = ['male', 'wei', 3, ['gz_cslilu']]
                 lib.characterPack.mode_guozhan.gz_kuailiangkuaiyue = ["male", "wei", 3, ["nzry_jianxiang", "gz_shenshi"]]
-                // lib.characterPack.mode_guozhan.gz_,['gzskin']]
+                lib.characterPack.mode_guozhan.gz_tw_wangchang = ['male', 'wei', 4, ['twkaiji'],
+                    ['doublegroup:wei:jin']
+                ]
                 // lib.characterPack.mode_guozhan.gz_,['gzskin']]
                 // lib.characterPack.mode_guozhan.gz_,['gzskin']]
                 // lib.characterPack.mode_guozhan.gz_,['gzskin']]
@@ -1426,7 +1428,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                 lib.characterPack.mode_guozhan.gz_sunqian = ['male', 'shu', 3, ['qianya', 'shuimeng'],
                     ['gzskin']
                 ]
-                lib.characterPack.mode_guozhan.gz_tw_huojun = ['male', 'shu', 4, ['twjieyu']]
+                lib.characterPack.mode_guozhan.gz_huojun = ['male', 'shu', 4, ['twjieyu'],['gzskin']]
                 lib.characterPack.mode_guozhan.gz_guansuo = ['male', 'shu', 4, ['xiefang', 'gz_zhengnan'],
                     ['gzskin']
                 ]
@@ -1480,7 +1482,9 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                 lib.characterPack.mode_guozhan.gz_fanyufeng = ['female', 'shu', 3, ['zmdiewu', 'zmmuyun'],
                     ['gzskin']
                 ]
-                // lib.characterPack.mode_guozhan.gz_,['gzskin']]
+                lib.characterPack.mode_guozhan.gz_huoyi = ['male', 'shu', 4, ['zmyihua'],
+                    ['doublegroup:shu:jin', 'gzskin', 'des:霍弋（生卒年不详），字绍先，霍峻之子，三国时期蜀汉至西晋初时将领。邓艾偷袭阴平，霍弋想率军救援成都，但刘禅以成都已有准备，不准，后刘禅投降，霍弋在得知司马氏善待刘禅后，才率领南中六郡投降。降晋后仍为南中都督，平定交阯、日南、九真三郡，功封列侯。']
+                ]
                 // lib.characterPack.mode_guozhan.gz_,['gzskin']]
                 // lib.characterPack.mode_guozhan.gz_,['gzskin']]
                 // lib.characterPack.mode_guozhan.gz_,['gzskin']]
@@ -1521,7 +1525,9 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     ['gzskin']
                 ]
                 lib.characterPack.mode_guozhan.gz_sunyi = ['male', 'wu', 4, ['zaoli']]
-                lib.characterPack.mode_guozhan.gz_zhouchu = ['male', 'wu', 4, ['xianghai', 'chuhai']]
+                lib.characterPack.mode_guozhan.gz_zhouchu = ['male', 'wu', 4, ['xianghai', 'chuhai'],
+                    ['doublegroup:wu:jin']
+                ]
                 // junzheng2
                 lib.characterPack.mode_guozhan.gz_zhaoyan = ['female', 'wu', 3, ['jinhui'],
                     ['gzskin']
@@ -1684,7 +1690,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     ['gzskin']
                 ]
                 // junzheng3
-                lib.characterPack.mode_guozhan.gz_huangfusong = ['male', 'han', 4, ['gz_shiji', 'sptaoluan'],
+                lib.characterPack.mode_guozhan.gz_huangfusong = ['male', 'han', 5, ['gz_shiji', 'sptaoluan'],
                     ['gzskin']
                 ]
                 lib.characterPack.mode_guozhan.gz_hansui = ['male', 'qun', 4, ['spniluan', 'spweiwu']]
@@ -1819,7 +1825,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                 lib.characterPack.mode_guozhan.gz_xushao = ['male', 'han', 3, ['pingjian'],
                     ['gzskin']
                 ]
-                lib.characterPack.mode_guozhan.gz_xingdaorong = ['male', 'han', 5, ['gz_xuxie']]
+                lib.characterPack.mode_guozhan.gz_xingdaorong = ['male', 'han', 4, ['gz_xuxie']]
                 lib.characterPack.mode_guozhan.gz_wanniangongzhu = ['female', 'han', 3, ['zhenge'],
                     ['gzskin']
                 ]
@@ -2066,7 +2072,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                 'gz_manchong', 'gz_zhongyao', 'gz_xizhicai', // 'gz_yangxiu',
                 // 蜀
                 'gz_zhangyì', 'gz_zhangyi', 'gz_guansuo', 'gz_mayunlu', 'gz_zhoucang',
-                'gz_tw_huojun', 'gz_sp_yangwan', 'gz_zhangxingcai', 'gz_sunqian', 'gz_mizhu',
+                'gz_huojun', 'gz_sp_yangwan', 'gz_zhangxingcai', 'gz_sunqian', 'gz_mizhu',
                 'gz_huanghao', 'gz_huangquan', 'gz_zhangsong',
                 // 吴
                 'gz_liuzan', 'gz_luotong', 'gz_zhuhuan', 'gz_sundeng', 'gz_lvdai',
@@ -2104,8 +2110,10 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                 // 双势力
                 // 魏
                 'gz_caomao', 'gz_chenqun', 'gz_caosong', 'gz_kuailiangkuaiyue',
+                'gz_tw_wangchang',
                 // 蜀
                 'gz_zhugeguo', 'gz_liuyong', 'gz_hujinding', 'gz_fanyufeng',
+                'gz_huoyi',
                 // 吴
                 'gz_tengyin', 'gz_wu_pangtong', 'gz_tengfanglan', 'gz_tw_puyangxing',
                 // 群
@@ -2188,7 +2196,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
             lib.translate.gz_baosanniang = '鲍三娘';
             lib.translate.gz_yangyi = '杨仪';
             lib.translate.gz_huangquan = '黄权';
-            lib.translate.gz_tw_huojun = '霍峻';
+            lib.translate.gz_huojun = '霍峻';
             lib.translate.gz_guanzhang = '关兴张苞';
             lib.translate.gz_yiji = '伊籍';
             lib.translate.gz_sp_huaman = '花鬘';
@@ -2196,6 +2204,10 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
             lib.translate.gz_zm_liuxian = '刘贤';
             lib.translate.gz_guoyouzhi = '郭攸之';
             lib.translate.gz_jl_xianglang = '向朗';
+            lib.translate.gz_huoyi = '霍弋';
+            // lib.translate. = '';
+            // lib.translate. = '';
+            // lib.translate. = '';
             // lib.translate. = '';
             // lib.translate. = '';
 
@@ -2236,6 +2248,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
             lib.translate.gz_zm_wuanguo = '武安国';
             lib.translate.gz_dongbai = '董白';
             lib.translate.gz_yuantan = '袁谭';
+            // lib.translate. = '';
+            // lib.translate. = '';
             // lib.translate. = '';
             // lib.translate. = '';
 
@@ -2312,7 +2326,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
             lib.perfectPair.dongyun = ['guoyouzhi']
             lib.perfectPair.jl_xianglang = ['xiangchong']
             lib.perfectPair.furong = ['fuqian']
-            lib.perfectPair.wuban = ['wuxian']
+            lib.perfectPair.huojun = ['huoyi']
             lib.perfectPair.wuban = ['wuxian']
             lib.perfectPair.wuban = ['wuxian']
             lib.perfectPair.wuban = ['wuxian']
@@ -2449,6 +2463,61 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
             skill: {
                 // 武将技能
                 skill: {
+                    // huoyi
+                    zmyihua: {
+                        audio: 'twsidai',
+                        enable: "phaseUse",
+                        usable: 1,
+                        filter: function (event, player) {
+                            return game.hasPlayer(function (current) {
+                                return current != player && current.countCards('h');
+                            });
+                        },
+                        filterTarget: function (card, player, target) {
+                            return player != target && target.countCards('h');
+                        },
+                        content: function () {
+                            'step 0'
+                            event.card = target.getCards('h').randomGet();
+                            target.showCards(event.card);
+                            'step 1'
+                            if (get.type(event.card, 'trick') == 'basic') {
+                                player.chooseCard('he').ai = function (card) {
+                                    var att = get.attitude(player, target);
+                                    var value = get.value(event.card);
+                                    if (att > 2) return value + 6 - get.value(card);
+                                    return value - get.value(card);;
+                                };
+                            }
+                            if (get.type(event.card, 'trick') == 'equip') {
+                                target.damage();
+                                event.finish();
+                            }
+                            if (get.type(event.card, 'trick') == 'trick') {
+                                target.discard(event.card);
+                                player.chooseToDiscard('he', true);
+                                event.finish();
+                            }
+                            'step 2'
+                            if (!result.bool) event.finish();
+                            else {
+                                player.give(result.cards, target);
+                                target.give(event.card, player);
+                            }
+                        },
+                        ai: {
+                            order: 8,
+                            result: {
+                                player: function (player, target) {
+                                    return 1;
+                                },
+                                target: function (player, target) {
+                                    if (target.countCards('h') == 1) return -1.5;
+                                    return -0.5;
+                                },
+                            },
+                        },
+                    },
                     // zongyu
                     gz_zyqiao: {
                         audio: 'zyqiao',
@@ -3556,7 +3625,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     gz_dianhu2: {
                         mark: "character",
                         intro: {
-                            content: "当你受到来自$的伤害或回复体力后，$摸一张牌",
+                            content: "当你受到与$相同势力的角色的伤害或回复体力后，$摸一张牌",
                         },
                         nopop: true,
                         trigger: {
@@ -3567,7 +3636,11 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         charlotte: true,
                         filter: function (event, player) {
                             if (player.storage.gz_dianhu2 && player.storage.gz_dianhu2.isIn()) {
-                                if (event.name == 'damage') return event.source == player.storage.gz_dianhu2;
+                                // if (event.name == 'damage') return event.source == player.storage.gz_dianhu2;
+                                if (event.name == 'damage') {
+                                    var playerHq = player.storage.gz_dianhu2;
+                                    return event.source == playerHq || event.source.isFriendOf(playerHq);
+                                }
                                 return true;
                             };
                         },
@@ -9246,7 +9319,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     gz_zhengnan: '征南',
                     gz_zhengnan_info: '主将技；当一名角色进入濒死状态时，若你未因其发动过〖征南〗，则你获得下列技能中的任意一个：〖武圣〗、 〖当先〗和〖制蛮〗（若技能全部拥有则改为摸1张牌。你以此法获得的〖当先〗结算时视为已发动过〖伏枥〗）。',
                     gz_dianhu: "点虎",
-                    gz_dianhu_info: "锁定技，当你明置此武将时，你选择一名其他角色。当其受到来自你的伤害后或回复体力后，你摸一张牌。",
+                    gz_dianhu_info: "锁定技，当你明置此武将时，你选择一名其他角色。当其回复体力或受到与你势力相同的角色造成的伤害后，你摸一张牌。",
                     gz_dianhu2: "点虎",
                     gz_dianhu2_info: "",
                     gz_dingcuo: '定措',
@@ -9291,6 +9364,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     gz_qimou_info: '主将技，限定技；出牌阶段，你可以失去任意点体力，然后直到回合结束，你计算与其他角色的距离时-X，且你可以多使用X张【杀】（X为你失去的体力值）',
                     gz_zyqiao: '气傲',
                     gz_zyqiao_info: "当你成为其他势力的角色使用牌的目标后，你可以弃置一张牌，然后你弃置其一张牌。",
+                    zmyihua: "翊化",
+                    zmyihua_info: "出牌阶段限一次，你可以展示其他角色的一张手牌，若其展示的牌为：基本牌，你可以用一张牌交换之；装备牌，你对其造成1点伤害；锦囊牌，弃置此牌，然后你弃置一张牌。",
 
 
                     // 吴
@@ -9473,11 +9548,11 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
 
                 },
             },
-            intro: "※ 将军争、对决武将尽可能多地搬运转移到国战，维持各国武将人数均等、强度平衡。<br/>※ 扩充国战武将和牌堆，让国战玩法更多样化。",
+            intro: "※ 《汉国战》 <br/>※ 国战模式新增汉朝势力。 <br/>※ 将军争、对决武将尽可能多地搬运转移到国战，维持各国武将人数均等、强度平衡。<br/>※ 扩充国战武将和牌堆，让国战玩法更多样化。<br/>※ 好多写法参考了其他扩展：《国战补充》《阵面对决》《极略三国》《贴吧精品》等。未经相关作者同意，有侵权可以联系删除。",
             author: "Mcontrite",
             diskURL: "",
             forumURL: "",
-            version: "2022.07.28",
+            version: "2022.08.02",
         },
         files: {
             "character": [],
