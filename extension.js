@@ -83,6 +83,11 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                 intro: "开启后将新增一个汉势力，并且修改部分武将势力为汉朝。",
                 init: true,
             }
+            lib.extensionMenu.extension_汉国战.shenjiang = {
+                name: "神将",
+                intro: "开启后将在将池中加入神将，神将只能放在主将位置。",
+                init: true,
+            }
 
 
             // 军争卡牌
@@ -184,287 +189,8 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                 }
             }
 
-            // 官方武将修改
-            if (config.guanfangs) {
-                // 野心家
-                // 双势力
-                // 魏
-                lib.characterPack.mode_guozhan.gz_bianfuren = ['female', 'wei', 3, ['wanwei', 'gzyuejian'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_caoren = ['male', 'wei', 4, ['gzjushou', 'xinjiewei'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_dianwei = ['male', 'wei', 4, ['gzqiangxi'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_xunyu = ['male', 'wei', 3, ['quhu', 'gzjieming'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_huaxin = ['male', 'wei', 3, ['wanggui', 'xibing'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_jianggan = ["male", "wei", 3, ["weicheng", "daoshu"],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_zangba = ['male', 'wei', 4, ['hengjiang'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_xiahouyuan = ['male', 'wei', 5, ['gzshensu'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_zhanghe = ['male', 'wei', 4, ['qiaobian', 'yuanlve'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_xuhuang = ['male', 'wei', 4, ['new_duanliang', 'jiezi'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_simayi = ['male', 'wei', 3, ['refankui', 'guicai'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_xiahoudun = ['male', 'wei', 4, ['reganglie', 'xinqingjian'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_dengai = ['male', 'wei', 4, ['oltuntian', 'gz_jixi', 'ziliang'],
-                    ['gzskin', 'die_audio']
-                ]
-                lib.characterPack.mode_guozhan.gz_caocao = ['male', 'wei', 4, ['jianxiong', 'nsxionglue']]
-                lib.characterPack.mode_guozhan.gz_zhangliao = ['male', 'wei', 4, ['new_retuxi', 'ziqu']]
-                lib.characterPack.mode_guozhan.gz_yuejin = ['male', 'wei', 4, ['xiaoguo'],
-                    ['gzskin']
-                ]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
 
 
-                // 蜀
-                lib.characterPack.mode_guozhan.gz_liushan = ['male', 'shu', 3, ['xiangle', 'refangquan'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_jiangfei = ['male', 'shu', 3, ['reshengxi', 'gzshoucheng'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_machao = ['male', 'shu', 4, ['zhuiji', 'new_tieji'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_zhaoyun = ['male', 'shu', 4, ['new_longdan', 'new_yajiao'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_zhurong = ['female', 'shu', 4, ['juxiang', 'relieren'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_menghuo = ['male', 'shu', 4, ['huoshou', 'rezaiqi'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_pangtong = ['male', 'shu', 3, ['xinlianhuan', 'niepan']]
-                lib.characterPack.mode_guozhan.gz_weiyan = ['male', 'shu', 4, ['xinkuanggu', 'gz_qimou'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_huangzhong = ['male', 'shu', 4, ['gzliegong'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_liubei = ['male', 'shu', 4, ['rerende'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_guanyu = ['male', 'shu', 5, ['new_rewusheng', 'gz_nuzhan'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_zhangfei = ['male', 'shu', 4, ['gzpaoxiao'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_liaohua = ['male', 'shu', 4, ['gzdangxian'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_chendao = ["male", "shu", 4, ["drlt_wanglie"],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_zongyu = ['male', 'shu', 3, ['gz_zyqiao', 'chengshang'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_mifuren = ['female', 'shu', 3, ['gzguixiu', 'gzcunsi'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_jiangwei = ['male', 'shu', 4, ['retiaoxin', 'tianfu', 'gz_yizhi'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_zhugeliang = ['male', 'shu', 3, ['reguanxing', 'new_kongcheng'],
-                    ['gzskin']
-                ]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
-
-
-                // 吴
-                lib.characterPack.mode_guozhan.gz_sunce = ['male', 'wu', 4, ['jiang', 'yingyang', 'gz_hunshang'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_sunshangxiang = ['female', 'wu', 3, ['jieyin', 'gzxiaoji'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_ganning = ['male', 'wu', 4, ['qixi', 'fenwei', 'gz_gnsheque'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_taishici = ['male', 'wu', 4, ['tianyi', 'hanzhan'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_luyusheng = ['female', 'wu', 3, ['zhente', 'zhiwei'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_lingcao = ['male', 'wu', 4, ['dujin'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_lvfan = ['male', 'wu', 3, ['xindiaodu', 'gzdiancai'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_jiangqing = ['male', 'wu', 4, ['gzshangyi', 'niaoxiang', 'gz_spjianyi'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_lingtong = ['male', 'wu', 4, ['rexuanfeng', 'yongjin'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_xusheng = ['male', 'wu', 4, ['xinpojun', 'yicheng'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_daqiao = ['female', 'wu', 3, ['guose', 'liuli'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_re_lusu = ['male', 'wu', 3, ['haoshi', 'dimeng'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_sunjian = ['male', 'wu', 5, ['yinghun'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_huanggai = ['male', 'wu', 4, ['new_kurou'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_sunquan = ['male', 'wu', 4, ['gzzhiheng'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_zhugejin = ['male', 'wu', 3, ['gzhuanshi', 'gzhongyuan', 'gzmingzhe'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_zumao = ['male', 'wu', 4, ['yinbing', 'juedi'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_zhugeke = ['male', 'wu', 3, ['gz_aocai', 'gzduwu'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_lukang = ['male', 'wu', 4, ['gz_keshou', 'zhuwei', 'drlt_huairou'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_zhouyu = ['male', 'wu', 3, ['reyingzi', 'refanjian', 'liejiang3d8'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_luxun = ['male', 'wu', 3, ['gzqianxun', 'duoshi', 'zonghuo'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_zhouyi = ['female', 'wu', 3, ['gzzhukou', 'gzduannian', 'gz_lianyou']]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
-
-
-                // 群
-                lib.characterPack.mode_guozhan.gz_zhangjiao = ['male', 'qun', 3, ['gz_leiji', 'xinguidao'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_caiwenji = ['female', 'han', 3, ['beige', 'gzduanchang'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_lvlingqi = ['female', 'qun', 4, ['guowu', 'gzshenwei', 'gzzhuangrong'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_beimihu = ["female", "qun", 3, ["hmkguishu", "hmkyuanyu"],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_zhangren = ['male', 'han', 4, ['chuanxin', 'fengshi'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_re_nanhualaoxian = ['male', 'qun', 3, ['gzgongxiu', 'gzjinghe'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_liqueguosi = ['male', 'qun', 4, ['gzxiongsuan'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_pangde = ['male', 'qun', 4, ['mashu', 'jianchu'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_yanwen = ['male', 'qun', 4, ['gz_shuangxiong'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_sp_duyu = ['male', 'qun', 4, ['spwuku', 'spmiewu'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_kongrong = ['male', 'han', 3, ['gzmingshi', 'lirang'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_jiling = ['male', 'qun', 4, ['shuangren'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_tianfeng = ['male', 'qun', 3, ['sijian', 'gzsuishi'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_fuwan = ['male', 'han', 4, ['twmoukui']]
-                lib.characterPack.mode_guozhan.gz_hetaihou = ['female', 'han', 3, ['zhendu', 'qiluan'],
-                    ['gzskin']
-                ]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
-
-
-                // 晋
-                lib.characterPack.mode_guozhan.gz_jin_simashi = ['male', 'jin', 4, ['yimie', 'tairan', 'gz_jinglve'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_jin_simazhao = ['male', 'jin', 4, ['xinchoufa', 'zhaoran', 'gz_daigong'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_duyu = ['male', 'jin', 4, ['sanchen']]
-                lib.characterPack.mode_guozhan.gz_jin_wangyuanji = ['female', 'jin', 3, ['yanxi'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_jin_zhangchunhua = ['female', 'jin', 3, ['huishi', 'qingleng'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_jin_yanghuiyu = ['female', 'jin', 3, ['ciwei', 'caiyuan'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_jin_xiahouhui = ['female', 'jin', 3, ['jyishi', 'shiduo']]
-                lib.characterPack.mode_guozhan.gz_jin_simayi = ['male', 'jin', 3, ['smyyingshi', 'xiongzhi', 'xinquanbian'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_simazhou = ['male', 'jin', 4, ['recaiwang', 'naxiang'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_zhongyan = ['female', 'jin', 3, ['bolan', 'yifa'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_shibao = ['male', 'jin', 4, ['gzzhuosheng'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_weiguan = ['male', 'jin', 3, ['zhongyun', 'shenpin'],
-                    ['gzskin']
-                ]
-                lib.characterPack.mode_guozhan.gz_zhanghuyuechen = ['male', 'jin', 4, ['xijue'],
-                    ['gzskin']
-                ]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
-                // lib.characterPack.mode_guozhan. ,['gzskin']]
-            }
 
             // 野心家设定修改
             if (config.yexinjia) {
@@ -545,6 +271,339 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         'step 8'
                         if (event.targets2.length) event.goto(3);
                         else delete _status.showYexings;
+                    });
+                }
+
+                lib.game.chooseCharacter = function () {
+                    var next = game.createEvent('chooseCharacter', false);
+                    next.showConfig = true;
+                    next.addPlayer = true;
+                    next.ai = function (player, list, back) {
+                        if (_status.brawl && _status.brawl.chooseCharacterAi) {
+                            if (_status.brawl.chooseCharacterAi(player, list, back) !== false) {
+                                return;
+                            }
+                        }
+                        var filterChoice = function (name1, name2) {
+                            if (get.is.double(name1)) return false;
+                            var group1 = lib.character[name1][1];
+                            var group2 = lib.character[name2][1];
+                            if (group1 == 'ye') return group2 != 'ye';
+                            var double = get.is.double(name2, true);
+                            if (double) return double.contains(group1);
+                            return group1 == group2;
+                        };
+                        for (var i = 0; i < list.length - 1; i++) {
+                            for (var j = i + 1; j < list.length; j++) {
+                                if (filterChoice(list[i], list[j]) || filterChoice(list[j], list[i])) {
+                                    var mainx = list[i];
+                                    var vicex = list[j];
+                                    if (!filterChoice(mainx, vicex) || (filterChoice(vicex, mainx) && get.guozhanReverse(mainx, vicex))) {
+                                        mainx = list[j];
+                                        vicex = list[i];
+                                    }
+                                    player.init(mainx, vicex, false);
+                                    if (back) {
+                                        list.remove(player.name1);
+                                        list.remove(player.name2);
+                                        for (var i = 0; i < list.length; i++) {
+                                            back.push(list[i]);
+                                        }
+                                    }
+                                    return;
+                                }
+                            }
+                        }
+                    }
+                    next.setContent(function () {
+                        "step 0"
+                        ui.arena.classList.add('choose-character');
+                        var addSetting = function (dialog) {
+                            dialog.add('选择座位').classList.add('add-setting');
+                            var seats = document.createElement('table');
+                            seats.classList.add('add-setting');
+                            seats.style.margin = '0';
+                            seats.style.width = '100%';
+                            seats.style.position = 'relative';
+                            for (var i = 1; i <= game.players.length; i++) {
+                                var td = ui.create.div('.shadowed.reduce_radius.pointerdiv.tdnode');
+                                td.innerHTML = '<span>' + get.cnNumber(i, true) + '</span>';
+                                td.link = i - 1;
+                                seats.appendChild(td);
+                                td.addEventListener(lib.config.touchscreen ? 'touchend' : 'click', function () {
+                                    if (_status.dragged) return;
+                                    if (_status.justdragged) return;
+                                    if (_status.cheat_seat) {
+                                        _status.cheat_seat.classList.remove('bluebg');
+                                        if (_status.cheat_seat == this) {
+                                            delete _status.cheat_seat;
+                                            return;
+                                        }
+                                    }
+                                    this.classList.add('bluebg');
+                                    _status.cheat_seat = this;
+                                });
+                            }
+                            dialog.content.appendChild(seats);
+                            if (game.me == game.zhu) {
+                                seats.previousSibling.style.display = 'none';
+                                seats.style.display = 'none';
+                            }
+
+                            dialog.add(ui.create.div('.placeholder.add-setting'));
+                            dialog.add(ui.create.div('.placeholder.add-setting'));
+                            if (get.is.phoneLayout()) dialog.add(ui.create.div('.placeholder.add-setting'));
+                        };
+                        var removeSetting = function () {
+                            var dialog = _status.event.dialog;
+                            if (dialog) {
+                                dialog.style.height = '';
+                                delete dialog._scrollset;
+                                var list = Array.from(dialog.querySelectorAll('.add-setting'));
+                                while (list.length) {
+                                    list.shift().remove();
+                                }
+                                ui.update();
+                            }
+                        };
+                        event.addSetting = addSetting;
+                        event.removeSetting = removeSetting;
+
+                        var chosen = lib.config.continue_name || [];
+                        game.saveConfig('continue_name');
+                        event.chosen = chosen;
+
+                        var i;
+                        event.list = [];
+                        for (i in lib.character) {
+                            if (i.indexOf('gz_shibing') == 0) continue;
+                            if (chosen.contains(i)) continue;
+                            if (lib.filter.characterDisabled(i)) continue;
+                            if (get.config('onlyguozhan')) {
+                                if (!lib.characterPack.mode_guozhan[i]) continue;
+                                if (get.is.jun(i)) continue;
+                            }
+                            if (lib.character[i][4].contains('hiddenSkill')) continue;
+                            if (lib.character[i][2] == 3 || lib.character[i][2] == 4 || lib.character[i][2] == 5)
+                                event.list.push(i);
+                        }
+                        _status.characterlist = event.list.slice(0);
+                        _status.yeidentity = [];
+                        if (_status.brawl && _status.brawl.chooseCharacterFilter) {
+                            event.list = _status.brawl.chooseCharacterFilter(event.list);
+                        }
+                        event.list.randomSort();
+                        // var list=event.list.splice(0,parseInt(get.config('choice_num')));
+                        var list;
+                        if (_status.brawl && _status.brawl.chooseCharacter) {
+                            list = _status.brawl.chooseCharacter(event.list, game.me);
+                        } else {
+                            list = game.getCharacterChoice(event.list, parseInt(get.config('choice_num')));
+                        }
+                        if (_status.auto) {
+                            event.ai(game.me, list);
+                            lib.init.onfree();
+                        } else if (chosen.length) {
+                            game.me.init(chosen[0], chosen[1], false);
+                            lib.init.onfree();
+                        } else {
+                            var dialog = ui.create.dialog('选择角色', 'hidden', [list, 'character']);
+                            if (!_status.brawl || !_status.brawl.noAddSetting) {
+                                if (get.config('change_identity')) {
+                                    addSetting(dialog);
+                                }
+                            }
+                            var next = game.me.chooseButton(dialog, true, 2).set('onfree', true);
+                            next.filterButton = function (button) {
+                                if (ui.dialog.buttons.length <= 10) {
+                                    for (var i = 0; i < ui.dialog.buttons.length; i++) {
+                                        if (ui.dialog.buttons[i] != button) {
+                                            if (lib.element.player.perfectPair.call({
+                                                    name1: button.link,
+                                                    name2: ui.dialog.buttons[i].link
+                                                })) {
+                                                button.classList.add('glow2');
+                                            }
+                                        }
+                                    }
+                                }
+                                if (lib.character[button.link][4].contains('hiddenSkill')) return false;
+                                if (ui.selected.buttons.length == 0) {
+                                    if (get.is.double(button.link)) return false;
+                                    if (lib.character[button.link][1] == 'ye') return true;
+                                    // if (lib.character[button.link][1] == 'shen') return true;
+                                    for (var i = 0; i < ui.dialog.buttons.length; i++) {
+                                        var double = get.is.double(ui.dialog.buttons[i].link, true);
+                                        if (ui.dialog.buttons[i] != button && (lib.character[button.link][1] == lib.character[ui.dialog.buttons[i].link][1] || double && double.contains(lib.character[button.link][1]))) {
+                                            return true;
+                                        }
+                                    }
+                                    return false;
+                                };
+                                if (!lib.character[button.link] || lib.character[button.link][1] == 'ye') return false;
+
+                                // 神将只能做主将
+                                var isShen = false
+                                var shenList = ['gz_shen_xunyu', "gz_shen_zhugeliang"]
+                                for (var i = 0; i < shenList.length; i++) {
+                                    if (button.link == shenList[i]) {
+                                        isShen = true;
+                                        break
+                                    }
+                                }
+                                if (!lib.character[button.link] || isShen) return false;
+                                if (isShen) return true;
+
+                                if (get.is.double(ui.selected.buttons[0].link)) return false;
+                                if (lib.character[ui.selected.buttons[0].link][1] == 'ye') return true;
+                                if (get.is.double(button.link)) return get.is.double(button.link, true).contains(lib.character[ui.selected.buttons[0].link][1]);
+                                return (lib.character[button.link][1] == lib.character[ui.selected.buttons[0].link][1]);
+                            };
+                            next.switchToAuto = function () {
+                                event.ai(game.me, list);
+                                ui.arena.classList.remove('selecting');
+                            };
+                            var createCharacterDialog = function () {
+                                event.dialogxx = ui.create.characterDialog('heightset', function (i) {
+                                    if (i.indexOf('gz_shibing') == 0) return true;
+                                    if (get.config('onlyguozhan')) {
+                                        if (!lib.characterPack.mode_guozhan[i]) return true;
+                                        if (get.is.jun(i)) return true;
+                                    }
+                                }, get.config('onlyguozhanexpand') ? 'expandall' : undefined, get.config('onlyguozhan') ? 'onlypack:mode_guozhan' : undefined);
+                                if (ui.cheat2) {
+                                    ui.cheat2.animate('controlpressdownx', 500);
+                                    ui.cheat2.classList.remove('disabled');
+                                }
+                            };
+                            if (lib.onfree) {
+                                lib.onfree.push(createCharacterDialog);
+                            } else {
+                                createCharacterDialog();
+                            }
+                            ui.create.cheat2 = function () {
+                                ui.cheat2 = ui.create.control('自由选将', function () {
+                                    if (this.dialog == _status.event.dialog) {
+                                        if (game.changeCoin) {
+                                            game.changeCoin(50);
+                                        }
+                                        this.dialog.close();
+                                        _status.event.dialog = this.backup;
+                                        this.backup.open();
+                                        delete this.backup;
+                                        game.uncheck();
+                                        game.check();
+                                        if (ui.cheat) {
+                                            ui.cheat.animate('controlpressdownx', 500);
+                                            ui.cheat.classList.remove('disabled');
+                                        }
+                                    } else {
+                                        if (game.changeCoin) {
+                                            game.changeCoin(-10);
+                                        }
+                                        this.backup = _status.event.dialog;
+                                        _status.event.dialog.close();
+                                        _status.event.dialog = _status.event.parent.dialogxx;
+                                        this.dialog = _status.event.dialog;
+                                        this.dialog.open();
+                                        game.uncheck();
+                                        game.check();
+                                        if (ui.cheat) {
+                                            ui.cheat.classList.add('disabled');
+                                        }
+                                    }
+                                });
+                                if (lib.onfree) {
+                                    ui.cheat2.classList.add('disabled');
+                                }
+                            }
+                            ui.create.cheat = function () {
+                                _status.createControl = ui.cheat2;
+                                ui.cheat = ui.create.control('更换', function () {
+                                    if (ui.cheat2 && ui.cheat2.dialog == _status.event.dialog) {
+                                        return;
+                                    }
+                                    if (game.changeCoin) {
+                                        game.changeCoin(-3);
+                                    }
+                                    event.list = event.list.concat(list);
+                                    event.list.randomSort();
+                                    // list=event.list.splice(0,parseInt(get.config('choice_num')));
+                                    list = game.getCharacterChoice(event.list, parseInt(get.config('choice_num')));
+                                    var buttons = ui.create.div('.buttons');
+                                    var node = _status.event.dialog.buttons[0].parentNode;
+                                    _status.event.dialog.buttons = ui.create.buttons(list, 'character', buttons);
+                                    _status.event.dialog.content.insertBefore(buttons, node);
+                                    buttons.animate('start');
+                                    node.remove();
+                                    game.uncheck();
+                                    game.check();
+                                });
+                                delete _status.createControl;
+                            }
+                            if (!_status.brawl || !_status.brawl.chooseCharacterFixed) {
+                                if (!ui.cheat && get.config('change_choice'))
+                                    ui.create.cheat();
+                                if (!ui.cheat2 && get.config('free_choose'))
+                                    ui.create.cheat2();
+                            }
+                        }
+                        "step 1"
+                        if (ui.cheat) {
+                            ui.cheat.close();
+                            delete ui.cheat;
+                        }
+                        if (ui.cheat2) {
+                            ui.cheat2.close();
+                            delete ui.cheat2;
+                        }
+                        if (result.buttons) {
+                            game.me.init(result.buttons[0].link, result.buttons[1].link, false);
+                            game.addRecentCharacter(result.buttons[0].link, result.buttons[1].link);
+                        }
+                        // game.me.setIdentity(game.me.group);
+                        event.list.remove(game.me.name1);
+                        event.list.remove(game.me.name2);
+                        for (var i = 0; i < game.players.length; i++) {
+                            if (game.players[i] != game.me) {
+                                event.ai(game.players[i], game.getCharacterChoice(event.list, parseInt(get.config('choice_num'))), event.list);
+                            }
+                        }
+                        for (var i = 0; i < game.players.length; i++) {
+                            game.players[i].classList.add('unseen');
+                            game.players[i].classList.add('unseen2');
+                            _status.characterlist.remove(game.players[i].name);
+                            _status.characterlist.remove(game.players[i].name2);
+                            if (game.players[i] != game.me) {
+                                game.players[i].node.identity.firstChild.innerHTML = '猜';
+                                game.players[i].node.identity.dataset.color = 'unknown';
+                                game.players[i].node.identity.classList.add('guessing');
+                            }
+                            game.players[i].hiddenSkills = lib.character[game.players[i].name1][3].slice(0);
+                            var hiddenSkills2 = lib.character[game.players[i].name2][3];
+                            for (var j = 0; j < hiddenSkills2.length; j++) {
+                                game.players[i].hiddenSkills.add(hiddenSkills2[j]);
+                            }
+                            for (var j = 0; j < game.players[i].hiddenSkills.length; j++) {
+                                if (!lib.skill[game.players[i].hiddenSkills[j]]) {
+                                    game.players[i].hiddenSkills.splice(j--, 1);
+                                }
+                            }
+                            game.players[i].group = 'unknown';
+                            game.players[i].sex = 'unknown';
+                            game.players[i].name1 = game.players[i].name;
+                            game.players[i].name = 'unknown';
+                            game.players[i].identity = 'unknown';
+                            game.players[i].node.name.show();
+                            game.players[i].node.name2.show();
+                            game.players[i]._group = lib.character[game.players[i].name1][1];
+                            for (var j = 0; j < game.players[i].hiddenSkills.length; j++) {
+                                game.players[i].addSkillTrigger(game.players[i].hiddenSkills[j], true);
+                            }
+                        }
+                        setTimeout(function () {
+                            ui.arena.classList.remove('choose-character');
+                        }, 500);
                     });
                 }
             }
@@ -1191,6 +1250,289 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                 lib.group = ['wei', 'shu', 'wu', 'qun', 'han', 'jin', 'shen']
             }
 
+            // 官方武将修改
+            if (config.guanfangs) {
+                // 野心家
+                // 双势力
+                // 魏
+                lib.characterPack.mode_guozhan.gz_bianfuren = ['female', 'wei', 3, ['wanwei', 'gzyuejian'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_caoren = ['male', 'wei', 4, ['gzjushou', 'xinjiewei'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_dianwei = ['male', 'wei', 4, ['gzqiangxi'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_xunyu = ['male', 'wei', 3, ['quhu', 'gzjieming'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_huaxin = ['male', 'wei', 3, ['wanggui', 'xibing'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_jianggan = ["male", "wei", 3, ["weicheng", "daoshu"],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_zangba = ['male', 'wei', 4, ['hengjiang'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_xiahouyuan = ['male', 'wei', 5, ['gzshensu'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_zhanghe = ['male', 'wei', 4, ['qiaobian', 'yuanlve'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_xuhuang = ['male', 'wei', 4, ['new_duanliang', 'jiezi'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_simayi = ['male', 'wei', 3, ['refankui', 'guicai'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_xiahoudun = ['male', 'wei', 4, ['reganglie', 'xinqingjian'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_dengai = ['male', 'wei', 4, ['oltuntian', 'gz_jixi', 'ziliang'],
+                    ['gzskin', 'die_audio']
+                ]
+                lib.characterPack.mode_guozhan.gz_caocao = ['male', 'wei', 4, ['jianxiong', 'nsxionglue']]
+                lib.characterPack.mode_guozhan.gz_zhangliao = ['male', 'wei', 4, ['new_retuxi', 'ziqu']]
+                lib.characterPack.mode_guozhan.gz_yuejin = ['male', 'wei', 4, ['xiaoguo'],
+                    ['gzskin']
+                ]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+
+
+                // 蜀
+                lib.characterPack.mode_guozhan.gz_liushan = ['male', 'shu', 3, ['xiangle', 'refangquan'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_jiangfei = ['male', 'shu', 3, ['reshengxi', 'gzshoucheng'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_machao = ['male', 'shu', 4, ['zhuiji', 'new_tieji'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_zhaoyun = ['male', 'shu', 4, ['new_longdan', 'new_yajiao'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_zhurong = ['female', 'shu', 4, ['juxiang', 'relieren'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_menghuo = ['male', 'shu', 4, ['huoshou', 'rezaiqi'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_pangtong = ['male', 'shu', 3, ['xinlianhuan', 'niepan']]
+                lib.characterPack.mode_guozhan.gz_weiyan = ['male', 'shu', 4, ['xinkuanggu', 'gz_qimou'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_huangzhong = ['male', 'shu', 4, ['gzliegong'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_liubei = ['male', 'shu', 4, ['rerende'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_guanyu = ['male', 'shu', 5, ['new_rewusheng', 'gz_nuzhan'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_zhangfei = ['male', 'shu', 4, ['gzpaoxiao'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_liaohua = ['male', 'shu', 4, ['gzdangxian'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_chendao = ["male", "shu", 4, ["drlt_wanglie"],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_zongyu = ['male', 'shu', 3, ['gz_zyqiao', 'chengshang'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_mifuren = ['female', 'shu', 3, ['gzguixiu', 'gzcunsi'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_jiangwei = ['male', 'shu', 4, ['retiaoxin', 'tianfu', 'gz_yizhi'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_zhugeliang = ['male', 'shu', 3, ['reguanxing', 'new_kongcheng'],
+                    ['gzskin']
+                ]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+
+
+                // 吴
+                lib.characterPack.mode_guozhan.gz_sunce = ['male', 'wu', 4, ['jiang', 'yingyang', 'gz_hunshang'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_sunshangxiang = ['female', 'wu', 3, ['jieyin', 'gzxiaoji'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_ganning = ['male', 'wu', 4, ['qixi', 'fenwei', 'gz_gnsheque'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_taishici = ['male', 'wu', 4, ['tianyi', 'hanzhan'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_luyusheng = ['female', 'wu', 3, ['zhente', 'zhiwei'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_lingcao = ['male', 'wu', 4, ['dujin'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_lvfan = ['male', 'wu', 3, ['xindiaodu', 'gzdiancai'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_jiangqing = ['male', 'wu', 4, ['gzshangyi', 'niaoxiang', 'gz_spjianyi'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_lingtong = ['male', 'wu', 4, ['rexuanfeng', 'yongjin'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_xusheng = ['male', 'wu', 4, ['xinpojun', 'yicheng'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_daqiao = ['female', 'wu', 3, ['guose', 'liuli'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_re_lusu = ['male', 'wu', 3, ['haoshi', 'dimeng'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_sunjian = ['male', 'wu', 5, ['yinghun'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_huanggai = ['male', 'wu', 4, ['new_kurou'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_sunquan = ['male', 'wu', 4, ['gzzhiheng'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_zhugejin = ['male', 'wu', 3, ['gzhuanshi', 'gzhongyuan', 'gzmingzhe'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_zumao = ['male', 'wu', 4, ['yinbing', 'juedi'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_zhugeke = ['male', 'wu', 3, ['gz_aocai', 'gzduwu'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_lukang = ['male', 'wu', 4, ['gz_keshou', 'zhuwei', 'drlt_huairou'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_zhouyu = ['male', 'wu', 3, ['reyingzi', 'refanjian', 'liejiang3d8'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_luxun = ['male', 'wu', 3, ['gzqianxun', 'duoshi', 'zonghuo'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_zhouyi = ['female', 'wu', 3, ['gzzhukou', 'gzduannian', 'gz_lianyou']]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+
+
+                // 群
+                lib.characterPack.mode_guozhan.gz_zhangjiao = ['male', 'qun', 3, ['gz_leiji', 'xinguidao'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_caiwenji = ['female', 'han', 3, ['beige', 'gzduanchang'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_lvlingqi = ['female', 'qun', 4, ['guowu', 'gzshenwei', 'gzzhuangrong'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_beimihu = ["female", "qun", 3, ["hmkguishu", "hmkyuanyu"],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_zhangren = ['male', 'han', 4, ['chuanxin', 'fengshi'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_re_nanhualaoxian = ['male', 'qun', 3, ['gzgongxiu', 'gzjinghe'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_liqueguosi = ['male', 'qun', 4, ['gzxiongsuan'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_pangde = ['male', 'qun', 4, ['mashu', 'jianchu'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_yanwen = ['male', 'qun', 4, ['gz_shuangxiong'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_sp_duyu = ['male', 'qun', 4, ['spwuku', 'spmiewu'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_kongrong = ['male', 'han', 3, ['gzmingshi', 'lirang'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_jiling = ['male', 'qun', 4, ['shuangren'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_tianfeng = ['male', 'qun', 3, ['sijian', 'gzsuishi'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_fuwan = ['male', 'han', 4, ['twmoukui']]
+                lib.characterPack.mode_guozhan.gz_hetaihou = ['female', 'han', 3, ['zhendu', 'qiluan'],
+                    ['gzskin']
+                ]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+
+
+                // 晋
+                lib.characterPack.mode_guozhan.gz_jin_simashi = ['male', 'jin', 4, ['yimie', 'tairan', 'gz_jinglve'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_jin_simazhao = ['male', 'jin', 4, ['xinchoufa', 'zhaoran', 'gz_daigong'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_duyu = ['male', 'jin', 4, ['sanchen']]
+                lib.characterPack.mode_guozhan.gz_jin_wangyuanji = ['female', 'jin', 3, ['yanxi'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_jin_zhangchunhua = ['female', 'jin', 3, ['huishi', 'qingleng'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_jin_yanghuiyu = ['female', 'jin', 3, ['ciwei', 'caiyuan'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_jin_xiahouhui = ['female', 'jin', 3, ['jyishi', 'shiduo']]
+                lib.characterPack.mode_guozhan.gz_jin_simayi = ['male', 'jin', 3, ['smyyingshi', 'xiongzhi', 'xinquanbian'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_simazhou = ['male', 'jin', 4, ['recaiwang', 'naxiang'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_zhongyan = ['female', 'jin', 3, ['bolan', 'yifa'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_shibao = ['male', 'jin', 4, ['gzzhuosheng'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_weiguan = ['male', 'jin', 3, ['zhongyun', 'shenpin'],
+                    ['gzskin']
+                ]
+                lib.characterPack.mode_guozhan.gz_zhanghuyuechen = ['male', 'jin', 4, ['xijue'],
+                    ['gzskin']
+                ]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+                // lib.characterPack.mode_guozhan. ,['gzskin']]
+            }
 
             // 添加额外武将
             if (config.junzhengs) {
@@ -1258,7 +1600,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                 lib.characterPack.mode_guozhan.gz_caochun = ['male', 'wei', 4, ['gz_shanjia'],
                     ['gzskin']
                 ]
-                lib.characterPack.mode_guozhan.gz_caozhang = ['male', 'wei', 4, ['rejiangchi'],
+                lib.characterPack.mode_guozhan.gz_caozhang = ['male', 'wei', 4, ['xinjiangchi'],
                     ['gzskin']
                 ]
                 lib.characterPack.mode_guozhan.gz_guohuai = ['male', 'wei', 4, ['rejingce'],
@@ -1395,7 +1737,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                 lib.characterPack.mode_guozhan.gz_zhaoxiang = ['female', 'shu', 3, ['refanghun'],
                     ['gzskin']
                 ]
-                lib.characterPack.mode_guozhan.gz_guanping = ['male', 'shu', 4, ['relongyin', 'jiezhong'],
+                lib.characterPack.mode_guozhan.gz_guanping = ['male', 'shu', 4, ['relongyin', 'gz_jiezhong'],
                     ['gzskin']
                 ]
                 lib.characterPack.mode_guozhan.gz_leitong = ['male', 'shu', 4, ['gz_kuiji']]
@@ -1930,7 +2272,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                 lib.characterPack.mode_guozhan.gz_zm_zhaoang = ["male", "wei", 3, ["zmfenji"]]
                 lib.characterPack.mode_guozhan.gz_diy_liufu = ['male', 'wei', 3, ['zhucheng']]
                 lib.characterPack.mode_guozhan.gz_diy_hanlong = ['male', 'wei', 4, ['siji', 'gz_ciqiu']]
-                lib.characterPack.mode_guozhan.gz_3d8_qianzhao = ["male", "wei", 4, ["yuanzhen3d8", "zhirong3d8"]]
+                // lib.characterPack.mode_guozhan.gz_3d8_qianzhao = ["male", "wei", 4, ["yuanzhen3d8", "zhirong3d8"]]
                 // lib.characterPack.mode_guozhan.gz_ ]
                 // lib.characterPack.mode_guozhan.gz_ ]
                 // lib.characterPack.mode_guozhan.gz_ ]
@@ -1947,7 +2289,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     ['gzskin']
                 ]
                 lib.characterPack.mode_guozhan.gz_jl_xianglang = ["male", 'shu', 3, ["jl_cangshu", "jl_kanwu"]]
-                lib.characterPack.mode_guozhan.gz_3d8_lihui = ["male", "shu", 4, ["xiazhi3d8", "pingshi3d8"]]
+                // lib.characterPack.mode_guozhan.gz_3d8_lihui = ["male", "shu", 4, ["xiazhi3d8", "pingshi3d8"]]
                 // lib.characterPack.mode_guozhan.gz_ ]
                 // lib.characterPack.mode_guozhan.gz_ ]
                 // lib.characterPack.mode_guozhan.gz_ ]
@@ -1963,7 +2305,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                 lib.characterPack.mode_guozhan.gz_zm_sunjing = ["male", "wu", 4, ["zmzhenxiang"]]
                 lib.characterPack.mode_guozhan.gz_zm_sunyu = ["male", "wu", 3, ["zmhongyuan", "zmfujiang"]]
                 lib.characterPack.mode_guozhan.gz_zm_huzong = ["male", "wu", 3, ["zmwengao", "jl_weifeng"]]
-                lib.characterPack.mode_guozhan.gz_3d8_sp_lvju = ["male", "wu", 4, ["zhiqu3d8", "sisheng3d8"]]
+                // lib.characterPack.mode_guozhan.gz_3d8_sp_lvju = ["male", "wu", 4, ["zhiqu3d8", "sisheng3d8"]]
                 // lib.characterPack.mode_guozhan.gz_ ]
                 // lib.characterPack.mode_guozhan.gz_ ]
                 // lib.characterPack.mode_guozhan.gz_ ]
@@ -1980,7 +2322,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                 lib.characterPack.mode_guozhan.gz_zm_zhangyan = ["male", "qun", 4, ["zmfeiyan"]]
                 lib.characterPack.mode_guozhan.gz_ns_duangui = ['male', 'han', 3, ['gz_jianning', 'gz_changshi']]
                 lib.characterPack.mode_guozhan.gz_zm_chenggongying = ["male", "qun", 3, ["zmpingxi", "zmwangzhi"]]
-                lib.characterPack.mode_guozhan.gz_3d8_gongsundu = ["male", "qun", 4, ["baliao3d8", "chailve3d8"]]
+                // lib.characterPack.mode_guozhan.gz_3d8_gongsundu = ["male", "qun", 4, ["baliao3d8", "chailve3d8"]]
                 // lib.characterPack.mode_guozhan.gz_ ]
                 // lib.characterPack.mode_guozhan.gz_ ]
                 // lib.characterPack.mode_guozhan.gz_ ]
@@ -1991,7 +2333,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                 lib.characterPack.mode_guozhan.gz_zm_wuanguo = ["male", "han", 4, ["gz_nuchui"],
                     ['des:武安国字霸候，是历史小说《三国演义》中虚构的一位人物，是北海太守孔融的部将，兵器为一把长柄铁锤，虎牢关被吕布一戟斩断手腕。']
                 ]
-                lib.characterPack.mode_guozhan.gz_3d8_liuchong = ["male", "han", 4, ["jinggou3d8", "moyan3d8"]]
+                // lib.characterPack.mode_guozhan.gz_3d8_liuchong = ["male", "han", 4, ["jinggou3d8", "moyan3d8"]]
                 // lib.characterPack.mode_guozhan.gz_ ]
                 // lib.characterPack.mode_guozhan.gz_ ]
                 // lib.characterPack.mode_guozhan.gz_ ]
@@ -2015,6 +2357,21 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                 // lib.characterPack.mode_guozhan.gz_ ]
                 // lib.characterPack.mode_guozhan.gz_ ]
                 // lib.characterPack.mode_guozhan.gz_ ]
+            }
+
+            // 添加神将
+            if (config.shenjiang) {
+                // 野心家
+                // 双势力
+                // 魏
+                // 蜀
+                // 吴
+                // 群
+                // 汉
+                lib.characterPack.mode_guozhan.gz_shen_xunyu = ['male', 'shen', 3, ['gz_lingce', 'dinghan'],
+                    ['han']
+                ]
+                // 晋
             }
 
             // 武将包内容
@@ -2162,6 +2519,17 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                 // 晋
                 'gz_yangdao', 'gz_3d8_ruanji',
             ]
+            lib.characterSort.mode_guozhan.shenjiang1 = [
+                // 野心家
+                // 双势力
+                // 魏
+                // 蜀
+                // 吴
+                // 群
+                // 汉
+                'gz_shen_xunyu'
+                // 晋
+            ]
             // lib.characterSort.mode_guozhan.packname = [
             //     // 野心家
             //     // 双势力
@@ -2169,6 +2537,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
             //     // 蜀
             //     // 吴
             //     // 群
+            //     // 汉
             //     // 晋
             // ]
 
@@ -2182,6 +2551,10 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
             lib.translate.junzheng5 = '军争五扩';
             lib.translate.junzheng6 = '军争六扩';
             lib.translate.diy1 = 'DIY一扩';
+            lib.translate.shenjiang1 = '神将一扩';
+            // lib.translate. = '';
+            // lib.translate. = '';
+            // lib.translate. = '';
 
             // 武将翻译
             // 野心家
@@ -2292,7 +2665,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
             lib.perfectPair.caiyong = ['caiwenji', 'caizhenji']
 
             // 魏
-            lib.perfectPair.caocao = ['caosong', 'caoang', 'caoanmin', 'caochong', 'caozhen', 'chengyu']
+            lib.perfectPair.caocao = ['caosong', 'caoang', 'caoanmin', 'caopi', 'caozhang', 'caozhi', 'caochong', 'caozhen', 'chengyu']
             lib.perfectPair.caopi = ['guozhao', 'caomao', 'jiakui']
             lib.perfectPair.caorui = ['zhenji', 'guohuanghou', 'guanqiujian']
             lib.perfectPair.caoang = ['caoanmin', 'qinghegongzhu']
@@ -2477,6 +2850,23 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
             skill: {
                 // 武将技能
                 skill: {
+                    // guanping
+                    gz_jiezhong: {
+                        audio: 'jiezhong',
+                        trigger: {
+                            player: "phaseZhunbeiBegin",
+                        },
+                        limited: true,
+                        skillAnimation: true,
+                        animationColor: 'orange',
+                        filter: function (event, player) {
+                            return player.countCards('h') < player.maxHp;
+                        },
+                        content: function () {
+                            player.awakenSkill('gz_jiezhong');
+                            player.draw(Math.min(5, player.maxHp - player.countCards('h')));
+                        },
+                    },
                     // lihui
                     xiazhi3d8: {
                         audio: "jlsg_zhige",
@@ -2653,10 +3043,10 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     pingshi3d8: {
                         audio: "jlsg_yanxi",
                         group: ["pingshi3d8_change", "pingshi3d8_before"],
+                        preHidden: true,
                         trigger: {
                             global: "phaseEnd"
                         },
-                        preHidden: true,
                         filter: function (event, player) {
                             if (player.storage.pingshi3d8.length < 2) return false;
                             var flag = 0;
@@ -4876,11 +5266,12 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         // },
                     },
                     sisheng3d8: {
+                        enable: "phaseUse",
+                        usable: 1,
                         preHidden: true,
                         init: function (player, skill) {
                             player.storage.sisheng3d8 = 0;
                         },
-                        enable: "chooseToUse",
                         hiddenCard: function (player, name) {
                             if (player.countCards("hes") < 3 && player.countCards("h") != 1) return false;
                             return get.type(name) == 'basic' && lib.inpile.contains(name);
@@ -6060,6 +6451,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                         audio: "huaiyi",
                         mark: true,
                         marktext: "霸",
+                        preHidden: true,
                         intro: {
                             content: function (storage, player, skill) {
                                 return "出牌阶段限一次，你可与一名其他角色拼点，若你赢，你视为对其使用【" + get.translation(player.storage.baliao3d81) + "】；若你没赢，其视为对你使用【" + get.translation(player.storage.baliao3d82) + "】。"
@@ -6239,6 +6631,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     },
                     chailve3d8: {
                         audio: "rehuaiyi",
+                        preHidden: true,
                         trigger: {
                             global: ["equipAfter", "addJudgeAfter", "loseAfter", "gainAfter", "loseAsyncAfter", "dying"],
                         },
@@ -8521,7 +8914,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             if (!player.storage.gz_nuchui) player.storage.gz_nuchui = [];
                         },
                         mark: true,
-                        lock: true,
+                        locked: true,
                         intro: {
                             content: function (storage) {
                                 if (!storage.length) return '';
@@ -10870,6 +11263,36 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                             },
                         },
                     },
+
+
+                    // 神将
+                    // gz_shen: {
+                    //     trigger: {
+                    //         player: 'showCharacterAfter',
+                    //     },
+                    //     locked: true,
+                    //     forced: true,
+                    //     content: function () {
+                    //         var skills = lib.character[target.name2][3];
+                    // 			for (var i = 0; i < skills.length; i++) {
+                    // 				player.removeSkill(get.name(skills[i]))
+                    // 			}
+                    //     },
+                    // },
+                    // shen_xunyu
+                    gz_lingce: {
+                        audio: 'lingce',
+                        trigger: {
+                            global: 'useCard'
+                        },
+                        forced: true,
+                        filter: function (event, player) {
+                            return (get.zhinangs().contains(event.card.name) || player.getStorage('dinghan').contains(event.card.name)) && event.card.isCard && event.cards.length == 1;
+                        },
+                        content: function () {
+                            player.draw()
+                        },
+                    },
                     // 武将技能 //
                 },
                 // 技能翻译
@@ -10886,11 +11309,11 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     gz_xianfu: '先辅',
                     gz_xianfu2: '先辅',
                     gz_xianfu2_bg: '辅',
-                    gz_xianfu_info: '锁定技，当你明置此武将时，你选择一名其他角色，当其受到伤害后，你受到等量的伤害，当其回复体力后，你回复等量的体力。',
+                    gz_xianfu_info: '锁定技；当你明置此武将时，你选择一名其他角色，当其受到伤害后，你受到等量的伤害，当其回复体力后，你回复等量的体力。',
                     gz_chouce: '筹策',
                     gz_chouce_info: '当你受到一点伤害后，你可以判定，若结果为：黑色，你弃置一名角色区域里的一张牌；红色，你选择一名角色，其摸一张牌，若其是〖先辅〗选择的角色，改为其摸两张牌。',
                     gz_gongao: '功獒',
-                    gz_gongao_info: '锁定技，每当一名角色死亡后你回复一点体力。',
+                    gz_gongao_info: '锁定技；每当一名角色死亡后你回复一点体力。',
                     gz_weizhong: '威重',
                     gz_weizhong_info: '主将技，锁定技；当你受到伤害或回复体力后你摸一张牌。',
                     gz_busuan: '卜算',
@@ -10924,9 +11347,9 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     gz_lingren_info: "每回合限一次；当你于出牌阶段使用带有「伤害」标签的基本牌或普通锦囊牌指定目标后，你可以猜测其中一个目标的手牌中是否有基本牌、锦囊牌或装备牌。若你猜中的项目数：≥1，此牌对该角色的伤害+1；≥2，你摸两张牌；≥3，你获得技能〖奸雄〗和〖行殇〗直到下回合开始。",
                     gz_ciqiu: '刺酋',
                     gz_ciqiu_dying: '刺酋',
-                    gz_ciqiu_info: '锁定技，每当你使用【杀】对目标角色造成伤害时，若该角色未受伤，你令此伤害+1；若其因此进入濒死状态，你令其移除主将，然后你移除此武将。 ',
+                    gz_ciqiu_info: '锁定技；每当你使用【杀】对目标角色造成伤害时，若该角色未受伤，你令此伤害+1；若其因此进入濒死状态，你令其移除主将，然后你移除此武将。 ',
                     yuanzhen3d8: "远振",
-                    yuanzhen3d8_info: "锁定技，你使用牌指定与你距离不为1的其他角色为唯一的目标后，你令其选择一项：1. 弃置一张牌；2. 令你摸一张牌。",
+                    yuanzhen3d8_info: "锁定技；你使用牌指定与你距离不为1的其他角色为唯一的目标后，你令其选择一项：1. 弃置一张牌；2. 令你摸一张牌。",
                     zhirong3d8: "制戎",
                     zhirong3d8_info: "出牌阶段开始时，你可将一名角色场上的一张装备牌置入另一名角色的装备区，然后前者视为对后者使用【过河拆桥】。",
 
@@ -10935,7 +11358,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     gz_poxiang: '破降',
                     gz_poxiang_info: '出牌阶段限一次，你可以将一张牌交给一名其他角色；若如此做，你失去1点体力并摸三张牌，然后跳过弃牌阶段。',
                     gz_jintao: '进讨',
-                    gz_jintao_info: '锁定技，你使用【杀】无距离限制且次数上限+1。你于出牌阶段内使用的第二张【杀】不可被响应。',
+                    gz_jintao_info: '锁定技；你使用【杀】无距离限制且次数上限+1。你于出牌阶段内使用的第二张【杀】不可被响应。',
                     gz_mansi: '蛮嗣',
                     gz_mansi_info: '出牌阶段限一次，你可以将所有手牌当做【南蛮入侵】使用。',
                     gz_kuiji: '溃击',
@@ -10943,13 +11366,13 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     gz_zhengnan: '征南',
                     gz_zhengnan_info: '主将技；当一名角色进入濒死状态时，若你未因其发动过〖征南〗，则你获得下列技能中的任意一个：〖武圣〗、 〖当先〗和〖制蛮〗（若技能全部拥有则改为摸1张牌。你以此法获得的〖当先〗结算时视为已发动过〖伏枥〗）。',
                     gz_dianhu: "点虎",
-                    gz_dianhu_info: "锁定技，当你明置此武将时，你选择一名其他角色。当其回复体力或受到与你势力相同的角色造成的伤害后，你摸一张牌。",
+                    gz_dianhu_info: "锁定技；当你明置此武将时，你选择一名其他角色。当其回复体力或受到与你势力相同的角色造成的伤害后，你摸一张牌。",
                     gz_dianhu2: "点虎",
                     gz_dianhu2_info: "",
                     gz_dingcuo: '定措',
                     gz_dingcuo_info: '每回合限一次。当你受到伤害后，你可摸两张牌，若这两张牌颜色不同，则你弃置一张手牌。',
                     gz_jugu: '巨贾',
-                    gz_jugu_info: '锁定技，1.你的手牌上限+X。2.当你明置此武将时，你摸X张牌（X为你的体力上限）',
+                    gz_jugu_info: '锁定技；1.你的手牌上限+X。2.当你明置此武将时，你摸X张牌（X为你的体力上限）',
                     gz_tianjiang: '天匠',
                     gz_tianjiang_info: '当你明置此武将时，你随机获得两张不同副类别的装备牌，并置入你的装备区。出牌阶段，你可以将装备区的牌移动至其他角色的装备区（可替换原装备）。若你以此法移动了〖铸刃〗的衍生装备，你摸两张牌。',
                     gz_shameng: '歃盟',
@@ -10959,7 +11382,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     gz_rezhennan: '镇南',
                     gz_rezhennan_info: '当你成为其他角色使用的牌的目标后，若此牌的目标数大于该角色的体力值，则你可以弃置两张牌并对其造成一点伤害。',
                     gz_nuzhan: '怒斩',
-                    gz_nuzhan_info: '锁定技，你使用的由装备牌转化的【杀】的伤害值基数+1',
+                    gz_nuzhan_info: '锁定技；你使用的由装备牌转化的【杀】的伤害值基数+1',
                     gz_zhuning: '诛佞',
                     gz_zhuning_info: '出牌阶段限一次。你可将任意张牌交给一名其他角色（称为“隙”），然后可视为使用一张具有伤害标签的基本牌/锦囊牌（不计入次数限制）。',
                     gz_qirang: '祈禳',
@@ -10994,11 +11417,14 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     xiazhi3d8_info: "每轮限一次，其他角色的回合开始时，你可令其执行下列一项，若你于此回合未获得或失去手牌，其于此回合结束时须令你执行下列另一项并重置此技能：1.摸两张牌；2.失去1点体力；3.将两张牌置于牌堆顶 。",
                     pingshi3d8: "平势",
                     pingshi3d8_info: "一名角色的回合结束后，若此回合有至少两名角色的体力减少或增加，你可令其中一名角色回复1点体力。",
+                    gz_jiezhong: '竭忠',
+                    gz_jiezhong_info: '限定技；准备阶段开始时，你可以将手牌补至手牌上限（至多摸五张）。',
+
 
 
                     // 吴
                     gz_qinzheng: '勤政',
-                    gz_qinzheng_info: '锁定技，当你使用或打出牌时，若你本局游戏内使用或打出过的牌数和：为4的倍数，你从牌堆中获得一张【杀】或【闪】；为8的倍数，你从牌堆中获得一张【桃】或【酒】；为12的倍数，你从牌堆中获得一张【决斗】或【无中生有】（可获得对应的衍生替换牌）。',
+                    gz_qinzheng_info: '锁定技；当你使用或打出牌时，若你本局游戏内使用或打出过的牌数和：为4的倍数，你从牌堆中获得一张【杀】或【闪】；为8的倍数，你从牌堆中获得一张【桃】或【酒】；为12的倍数，你从牌堆中获得一张【决斗】或【无中生有】（可获得对应的衍生替换牌）。',
                     gz_jishe: '极奢',
                     gz_jishe_info: '出牌阶段，若你的手牌上限大于0，你可以摸一张牌，然后你本回合的手牌上限-1。结束阶段开始时，若你没有手牌，则你可以横置至多X名角色的武将牌（X为你的体力值）',
                     gz_hunshang: "魂殇",
@@ -11006,7 +11432,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     gz_fenli: '奋励',
                     gz_fenli_info: '主将技；若你的手牌数为全场最多，你可以跳过摸牌阶段；若你的体力值为全场最多，你可以跳过出牌阶段；若你的装备区里有牌且数量为全场最多，你可以跳过弃牌阶段。',
                     gz_huaiju: "怀橘",
-                    gz_huaiju_info: "锁定技，当你明置此武将时，你获得3个“橘”标记。（有“橘”的角色受到伤害时，防止此伤害，然后移去一个“橘”；有“橘”的角色摸牌阶段额外摸一张牌）",
+                    gz_huaiju_info: "锁定技；当你明置此武将时，你获得3个“橘”标记。（有“橘”的角色受到伤害时，防止此伤害，然后移去一个“橘”；有“橘”的角色摸牌阶段额外摸一张牌）",
                     gz_aocai: '傲才',
                     gz_aocai_info: '当你于回合外需要使用或打出一张基本牌时，你可以观看牌堆顶的两张牌（若你没有手牌则改为四张）。若你观看的牌中有此牌，你可以使用打出之。',
                     gz_tianyun: '天运',
@@ -11046,7 +11472,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     gz_guolie2: '果烈',
                     gz_guolie_info: '摸牌阶段开始前，你可跳过此阶段。若如此做，你摸一张牌，然后你的红/黑色牌均视为【火攻】/【过河拆桥】直到回合结束；结束阶段，你获得本回合从你以外的区域内进入弃牌堆的所有牌。',
                     xintu3d8: "辛土",
-                    xintu3d8_info: "锁定技，摸牌阶段开始时，你展示牌堆顶三张牌并依次使用之（无法使用则不使用），然后你以此法使用的牌数：不小于X，你弃置装备区里一张牌；大于X，你结束摸牌阶段（X为你的体力值）。",
+                    xintu3d8_info: "锁定技；摸牌阶段开始时，你展示牌堆顶三张牌并依次使用之（无法使用则不使用），然后你以此法使用的牌数：不小于X，你弃置装备区里一张牌；大于X，你结束摸牌阶段（X为你的体力值）。",
                     gz_keshou: '恪守',
                     gz_keshou_info: '当你受到伤害时，你发动此技能。你可弃置两张颜色相同的牌，若如此做，此伤害-1。你的势力已确定且场上没有与你势力相同的其他角色，则你进行判定，若结果为红色，你摸一张牌。',
                     gz_xingchong: "幸宠",
@@ -11056,26 +11482,9 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     gz_xianghai: '乡害',
                     gz_xianghai_info: '锁定技；你手牌区的装备牌均视为【酒】，与你势力不同的其他角色的手牌上限-1。',
                     zhiqu3d8: "直驱",
-                    zhiqu3d8_info: "锁定技，转换技，你回合内使用的下一张基本牌或普通锦囊牌无视①次数②距离③目标数限制。",
+                    zhiqu3d8_info: "锁定技；转换技，你回合内使用的下一张基本牌或普通锦囊牌无视①次数②距离③目标数限制。",
                     sisheng3d8: "死生",
-                    sisheng3d8_info: "你可将三张牌或最后一张手牌当一张任意基本牌使用。你以此法失去所有手牌时，若为本轮首次，则于本回合结束时摸三张牌。",
-
-
-
-                    // 汉
-                    gz_nuchui: "怒锤",
-                    gz_nuchui_info: "锁定技，当你使用【杀】或【决斗】对一名角色奇数次造成伤害时，你需弃置两张牌令此伤害加一。",
-                    gz_xuxie: '虚猲',
-                    gz_xuxie_info: '出牌阶段开始时，你可以失去一点体力并选择所有与你距离为一的角色，弃置这些角色的各一张牌或令这些角色各摸一张牌。出牌阶段结束时，若你的体力值和手牌数均不为全场最多，你回复一点体力或摸两张牌。',
-                    gz_bingjie: '秉节',
-                    gz_bingjie_info: '出牌阶段开始时，你可失去一点体力，然后当你于本阶段内使用【杀】或普通锦囊牌指定其他角色为目标后，其弃置一张牌。',
-                    gz_zhengding: '正订',
-                    gz_zhengding_info: '锁定技。当你于回合外使用或打出牌响应其他角色使用的牌时，若这两张牌花色相同，则你回复一点体力。',
-                    jinggou3d8: "精彀",
-                    jinggou3d8_info: "锁定技，你使用的武器牌结算后，若你的攻击范围为全场最大或最小（或之一），你须对一名角色造成1点伤害。",
-                    moyan3d8: "末焱",
-                    moyan3d8_info: "准备阶段，你可以亮出牌堆顶的三张牌，令一名角色选择并获得其中至少一张牌；本轮其受到伤害时，若其手牌数不大于X，此伤害+X（X为其此次得到的牌数）。",
-
+                    sisheng3d8_info: "出牌阶段限一次，你可将三张牌或最后一张手牌当一张任意基本牌使用。你以此法失去所有手牌时，若为本轮首次，则于本回合结束时摸三张牌。",
 
 
 
@@ -11092,7 +11501,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     gz_gongjian: '攻坚',
                     gz_gongjian_info: '每回合限一次，当你使用【杀】指定目标后，若此【杀】和你使用的上一张【杀】或场上使用的上一张【杀】有相同的目标，则你可以弃置其一张牌，然后获得以此法弃置的所有【杀】。',
                     gz_kuimang: '溃蟒',
-                    gz_kuimang_info: '主将技，锁定技，一名角色死亡后，若你对其造成过伤害，你摸两张牌。',
+                    gz_kuimang_info: '主将技，锁定技；一名角色死亡后，若你对其造成过伤害，你摸两张牌。',
                     gz_liushi: '流矢',
                     gz_liushi2: '流矢',
                     gz_liushi_info: '出牌阶段限一次，你可以将一张红桃牌置于牌堆顶，视为对一名角色使用一张【杀】（无距离限制且不计入使用次数）。当此【杀】造成伤害后，受到伤害的角色获得一个“流”。有“流”的角色手牌上限-X（X为其“流”数）。',
@@ -11103,11 +11512,11 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     gz_shouxi: '守玺',
                     gz_shouxi_info: '当你成为【杀】的目标后，你可声明一种未以此法声明过的基本牌的牌名。若使用者弃置一张你声明的牌，其获得你的一张牌；若否，则此【杀】对你无效',
                     gz_jutu: '据土',
-                    gz_jutu_info: '锁定技，准备阶段，你弃置所有你武将牌上的“生”并摸1张牌，然后将X张牌置于你的武将牌上，称为“生”（X为你因〖邀虎〗选择势力的角色数量)。',
+                    gz_jutu_info: '锁定技；准备阶段，你弃置所有你武将牌上的“生”并摸1张牌，然后将X张牌置于你的武将牌上，称为“生”（X为你因〖邀虎〗选择势力的角色数量)。',
                     gz_fuqi: '伏骑',
-                    gz_fuqi_info: '主将技，锁定技，当你使用牌时，你令所有与你距离为1的其他角色不能使用或打出牌响应此牌。',
+                    gz_fuqi_info: '主将技，锁定技；当你使用牌时，你令所有与你距离为1的其他角色不能使用或打出牌响应此牌。',
                     gz_jiaozi: '骄恣',
-                    gz_jiaozi_info: '副将技，锁定技，若你的手牌数为全场唯一最多，则当你造成或受到伤害时，此伤害+1。',
+                    gz_jiaozi_info: '副将技，锁定技；若你的手牌数为全场唯一最多，则当你造成或受到伤害时，此伤害+1。',
                     gz_shuangxiong: "双雄",
                     gz_shuangxiong_info: "摸牌阶段你可以放弃摸牌，改为展示牌堆顶的两张牌并获得其中的一张。然后你本回合可以将与此牌颜色不同的一张手牌当做【决斗】使用。",
                     gz_shiyuan: '诗怨',
@@ -11118,9 +11527,9 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     gz_leiji_misa: '雷击',
                     gz_leiji_info: '①当你使用或打出【闪】或【闪电】时，你可以进行判定。②你的判定牌生效后，若结果为黑桃/梅花，你可对一名其他角色造成1点雷电伤害/回复1点体力。',
                     zmbaoluan: "暴乱",
-                    zmbaoluan_info: "锁定技，准备阶段，你须弃置一张牌。",
+                    zmbaoluan_info: "锁定技；准备阶段，你须弃置一张牌。",
                     zmmozhong: "魔踵",
-                    zmmozhong_info: "锁定技，当你于回合内首次造成伤害时，你令此伤害+X（X为你上回合结束阶段已损失的体力值）。",
+                    zmmozhong_info: "锁定技；当你于回合内首次造成伤害时，你令此伤害+X（X为你上回合结束阶段已损失的体力值）。",
                     zmfeiyan: "飞燕",
                     zmfeiyan_info: "一名其他角色使用【杀】指定目标时，若其在你的攻击范围内，你可以立即对其使用一张【杀】，若如此做，你摸一张牌。",
                     gz_jianning: '奸佞',
@@ -11136,7 +11545,7 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     gz_koulve: '寇略',
                     gz_koulve_info: '当你于出牌阶段内对其他角色造成伤害后，你可以展示其X张手牌（X为其已损失的体力值）。若这些牌中：有带有伤害标签的基本牌或锦囊牌，则你获得之；有红色牌，则你失去1点体力，然后摸一张牌。',
                     jl_guanlei: "贯雷",
-                    jl_guanlei_info: "锁定技，当你受到伤害时，视为受到雷电伤害；若有伤害来源，其将展示手牌。",
+                    jl_guanlei_info: "锁定技；当你受到伤害时，视为受到雷电伤害；若有伤害来源，其将展示手牌。",
                     jl_leiming: "雷鸣",
                     jl_leiming_info: "当你受到1点雷电伤害后，你可以摸1张牌，然后可以选择1名其他角色，令其弃置1张区域里的牌。",
                     gz_xiongmang: '雄莽',
@@ -11147,17 +11556,17 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     gz_cuijin: '催进',
                     gz_cuijin_info: '当你或你攻击范围内的角色使用【杀】时，你可以弃置两张牌并获得如下效果：此【杀】的伤害值基数+1，且当此【杀】结算结束后，若未造成过伤害，则你对使用者造成1点伤害。',
                     gz_cangchu: '仓储',
-                    gz_cangchu_info: '锁定技，当你明置此武将时，你获得3个“粮”；你的手牌上限+X（X为“粮”数）。当你于回合外获得牌时，你获得一个“粮”。（你的“粮”数不能超过存活角色数）',
+                    gz_cangchu_info: '锁定技；当你明置此武将时，你获得3个“粮”；你的手牌上限+X（X为“粮”数）。当你于回合外获得牌时，你获得一个“粮”。（你的“粮”数不能超过存活角色数）',
                     gz_yinshi: "隐士",
                     gz_yinshi_info: "锁定技；若你防具栏为空，防止你受到的属性伤害或锦囊牌伤害。",
                     gz_dikai: '敌忾',
                     gz_dikai_info: '出牌阶段，你可以将至少两张手牌当【杀】使用（无距离限制），你以此法使用的【杀】被目标角色的【闪】响应时，你可以摸等量牌。',
                     gz_zhengsi: '争嗣',
-                    gz_zhengsi_info: '锁定技，结束阶段开始时，你须将手牌数调整至二。',
+                    gz_zhengsi_info: '锁定技；结束阶段开始时，你须将手牌数调整至二。',
                     gz_dianhua: '点化',
                     gz_dianhua_info: '出牌阶段限一次，若你的手牌数不大于你的体力上限，则你可以展示你的手牌，观看牌堆顶相同数量的牌并以任意方式交换之',
                     gz_zhenyi: '真仪',
-                    gz_zhenyi_info: '锁定技，单体锦囊牌无法对你造成伤害。其它角色于其回合内第二次使用锦囊牌指定你为目标时，取消之',
+                    gz_zhenyi_info: '锁定技；单体锦囊牌无法对你造成伤害。其它角色于其回合内第二次使用锦囊牌指定你为目标时，取消之',
                     gz_tiqi: '涕泣',
                     gz_tiqi_info: '其他角色的摸牌阶段结束时/被跳过时，若其于本阶段内因摸牌而获得的牌数不为二，则你可以摸一张牌。',
                     gz_jiangong: '俭恭',
@@ -11170,6 +11579,24 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     baliao3d8_info: "出牌阶段限一次，你可与一名其他角色拼点，若你赢，你视为对其使用【顺手牵羊】；若你没赢，其视为对你使用【决斗】。",
                     chailve3d8: "豺略",
                     chailve3d8_info: "你的回合内，其他角色进入濒死状态或失去最后的手牌后，你可将“霸辽”描述中一张锦囊牌的名称改为【顺手牵羊】、【决斗】，若因此与另一张名称相同，你摸两张牌。",
+
+
+
+
+                    // 汉
+                    gz_nuchui: "怒锤",
+                    gz_nuchui_info: "锁定技；当你使用【杀】或【决斗】对一名角色奇数次造成伤害时，你需弃置两张牌令此伤害加一。",
+                    gz_xuxie: '虚猲',
+                    gz_xuxie_info: '出牌阶段开始时，你可以失去一点体力并选择所有与你距离为一的角色，弃置这些角色的各一张牌或令这些角色各摸一张牌。出牌阶段结束时，若你的体力值和手牌数均不为全场最多，你回复一点体力或摸两张牌。',
+                    gz_bingjie: '秉节',
+                    gz_bingjie_info: '出牌阶段开始时，你可失去一点体力，然后当你于本阶段内使用【杀】或普通锦囊牌指定其他角色为目标后，其弃置一张牌。',
+                    gz_zhengding: '正订',
+                    gz_zhengding_info: '锁定技；当你于回合外使用或打出牌响应其他角色使用的牌时，若这两张牌花色相同，则你回复一点体力。',
+                    jinggou3d8: "精彀",
+                    jinggou3d8_info: "锁定技；你使用的武器牌结算后，若你的攻击范围为全场最大或最小（或之一），你须对一名角色造成1点伤害。",
+                    moyan3d8: "末焱",
+                    moyan3d8_info: "准备阶段，你可以亮出牌堆顶的三张牌，令一名角色选择并获得其中至少一张牌；本轮其受到伤害时，若其手牌数不大于X，此伤害+X（X为其此次得到的牌数）。",
+
 
 
                     // 晋
@@ -11195,13 +11622,22 @@ game.import("extension", function (lib, game, ui, get, ai, _status) {
                     // yinling3d8_info: "你仅成为过一张牌目标的回合结束阶段，你可重铸场上一张与之同字数的其它牌；若无匹配的牌，你可视为使用一张与之字数和为五的即时牌。",
 
 
+                    // 神
+                    // gz_shen: '神',
+                    // gz_shen_info: '锁定技；当你明置此武将时，你的副将的所有技能失效。',
+                    gz_lingce: '灵策',
+                    gz_lingce_info: '锁定技；当有〖智囊〗或〖定汉①〗记录过的锦囊牌被使用时，若此牌不为转化牌且对应实体牌数量为一，则你摸一张牌。',
                 },
             },
-            intro: "※ 《汉国战》 <br/>※ 国战模式新增汉朝势力。 <br/>※ 将军争、对决武将尽可能多地搬运转移到国战，维持各国武将人数均等、强度平衡。<br/>※ 扩充国战武将和牌堆，让国战玩法更多样化。<br/>※ 好多写法参考了其他扩展：《国战补充》《阵面对决》《极略三国》《贴吧精品》《晋国战平行时空》等。未经相关作者同意，有侵权可以联系删除。",
+            intro: "※《汉国战》 <br/>\
+                    ※ 国战模式中添加汉朝势力。 <br/>\
+                    ※ 将军争、对决武将无脑（几乎）搬运转移到国战（主要是为了顺带熟悉一下玩的少的武将）。<br/>\
+                    ※ 扩充国战武将和牌堆，让国战玩法更多样化，尽量维持各国武将人数均等、强度平衡。<br/>\
+                    ※ 思路和写法参考了其他扩展：《国战补充》《阵面对决》《极略三国》《贴吧精品》《晋国战平行时空》等。未经相关作者同意，有侵权可以联系删除。",
             author: "Mcontrite",
             diskURL: "",
             forumURL: "",
-            version: "2022.08.07",
+            version: "2022.08.10",
         },
         files: {
             "character": [],
